@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:mysource="https://github.com/bingbo/schema/mysource"
+       xmlns:ibingbo="https://github.com/bingbo/schema/ibingbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc.xsd
+       https://github.com/bingbo/schema/mysource https://github.com/bingbo/schema/mysource.xsd https://github.com/bingbo/schema/ibingbo https://github.com/bingbo/schema/ibingbo.xsd">
+
+    <mvc:annotation-driven/>
+    <context:component-scan base-package="com.ibingbo"/>
+    <context:property-placeholder location="classpath:config.properties"/>
+
+    <mysource:people id="mypeople" name="bill" age="30"/>
+    <mysource:annotation-config></mysource:annotation-config>
+
+    <!--<bean id="serviceRegistry" class="com.ibingbo.rpc.server.ServiceRegistry">-->
+        <!--<constructor-arg name="registryAddress" value="127.0.0.1:2181"/>-->
+    <!--</bean>-->
+
+    <!--<bean id="rpcServer" class="com.ibingbo.rpc.server.RpcServer">-->
+        <!--<constructor-arg name="serverAddress" value="127.0.0.1:8000"/>-->
+        <!--<constructor-arg name="serviceRegistry" ref="serviceRegistry"/>-->
+    <!--</bean>-->
+
+    <ibingbo:registry address="127.0.0.1:2181"/>
+    <ibingbo:reference interface="com.ibingbo.service.HelloService" id="helloService" group="test" version="1.0.0"/>
+
+</beans>

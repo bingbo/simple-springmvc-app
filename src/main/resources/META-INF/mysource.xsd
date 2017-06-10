@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="https://github.com/bingbo/schema/mysource"
+            xmlns="https://github.com/bingbo/schema/mysource"
+            elementFormDefault="qualified"
+            attributeFormDefault="unqualified"
+            xmlns:beans="http://www.springframework.org/schema/beans">
+
+    <xsd:import namespace="http://www.springframework.org/schema/beans"/>
+    <xsd:annotation>
+        <xsd:documentation>
+            <![CDATA[
+              第一个测试schema
+            ]]>
+        </xsd:documentation>
+    </xsd:annotation>
+    <xsd:element name="people">
+        <xsd:complexType>
+            <xsd:complexContent>
+                <xsd:extension base="beans:identifiedType">
+                    <xsd:attribute name="name" type="xsd:string"/>
+                    <xsd:attribute name="age" type="xsd:int"/>
+                </xsd:extension>
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="annotation-config">
+        <xsd:annotation>
+            <xsd:documentation>
+                <![CDATA[
+                    激活可以在bean中被探测到的注解
+                ]]>
+            </xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+</xsd:schema>
