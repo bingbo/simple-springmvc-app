@@ -9,7 +9,7 @@ import org.springframework.context.ApplicationContextAware;
 /**
  * Created by bing on 17/6/8.
  */
-public class People implements BeanNameAware,BeanFactoryAware,ApplicationContextAware,InitializingBean,DisposableBean{
+public class People implements BeanNameAware,BeanFactoryAware,ApplicationContextAware,InitializingBean,DisposableBean,FactoryBean{
     private String id;
     private String name;
     private Integer age;
@@ -87,5 +87,17 @@ public class People implements BeanNameAware,BeanFactoryAware,ApplicationContext
 
     public void myDestroy() {
         System.out.println("people call myDestroy()");
+    }
+
+    public Object getObject() throws Exception {
+        return new People();
+    }
+
+    public Class<?> getObjectType() {
+        return People.class;
+    }
+
+    public boolean isSingleton() {
+        return true;
     }
 }

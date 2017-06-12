@@ -20,8 +20,8 @@ public class IndexController {
 
     @Autowired
     private People people;
-    @Autowired
-    private ReferenceBean referenceBean;
+//    @Autowired
+//    private ReferenceBean referenceBean;
 
     @Value(value = "#{bill.name}")
     private String name;
