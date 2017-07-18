@@ -22,7 +22,7 @@
         <!--<property name="age" value="12"/>-->
     <!--</bean>-->
     <mysource:people id="mypeople" name="bill" age="30"/>
-    <!--<mysource:annotation-config></mysource:annotation-config>-->
+    <mysource:annotation-driven/>
 
     <!--<bean id="serviceRegistry" class="com.ibingbo.rpc.server.ServiceRegistry">-->
         <!--<constructor-arg name="registryAddress" value="127.0.0.1:2181"/>-->

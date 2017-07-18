@@ -33,4 +33,14 @@
             </xsd:documentation>
         </xsd:annotation>
     </xsd:element>
+
+    <xsd:element name="annotation-driven">
+        <xsd:annotation>
+            <xsd:documentation>
+                <![CDATA[
+                    激活可以在bean中被探测到的注解
+                ]]>
+            </xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
 </xsd:schema>

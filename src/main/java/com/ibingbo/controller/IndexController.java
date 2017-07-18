@@ -1,7 +1,10 @@
 package com.ibingbo.controller;
 
+import com.ibingbo.annotation.MyService;
 import com.ibingbo.bean.People;
 import com.ibingbo.rpc.spring.bean.ReferenceBean;
+import com.ibingbo.service.TestService;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +29,9 @@ public class IndexController {
     @Value(value = "#{bill.name}")
     private String name;
 
+    @MyService
+    private TestService testService;
+
 
     @ResponseBody
     @RequestMapping("/index")
@@ -33,6 +39,7 @@ public class IndexController {
         LOGGER.debug("*************** {} *************", "/index");
         LOGGER.info("********id:{}*********name:{}**********age:{}", people.getId(), people.getName(), people.getAge());
         LOGGER.info("*********@value name:{}**********", name);
+        this.testService.test("testProcessor");
         return "hello,index";
     }
 

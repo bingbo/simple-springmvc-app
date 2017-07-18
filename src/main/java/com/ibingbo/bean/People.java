@@ -6,6 +6,8 @@ import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
+import com.ibingbo.annotation.MyRemoteService;
+
 /**
  * Created by bing on 17/6/8.
  */
