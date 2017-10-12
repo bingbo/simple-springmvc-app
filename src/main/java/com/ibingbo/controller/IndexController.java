@@ -1,10 +1,5 @@
 package com.ibingbo.controller;
 
-import com.ibingbo.annotation.MyService;
-import com.ibingbo.bean.People;
-import com.ibingbo.rpc.spring.bean.ReferenceBean;
-import com.ibingbo.service.TestService;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +7,10 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.ibingbo.annotation.MyService;
+import com.ibingbo.bean.People;
+import com.ibingbo.service.TestService;
 
 /**
  * Created by bing on 17/6/6.
