@@ -73,6 +73,13 @@
             <artifactId>junit</artifactId>
             <version>4.12</version>
         </dependency>
+
+        <!--Javassist是一个开源的分析、编辑和创建Java字节码的类库-->
+        <dependency>
+            <groupId>org.javassist</groupId>
+            <artifactId>javassist</artifactId>
+            <version>3.21.0-GA</version>
+        </dependency>
     </dependencies>
 
 </project>
