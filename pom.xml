@@ -74,11 +74,24 @@
             <version>4.12</version>
         </dependency>
 
-        <!--Javassist是一个开源的分析、编辑和创建Java字节码的类库-->
+        <!--Javassist是一个开源的分析、编辑和创建Java字节码的类库,
+        jdk1.8必须用javassist3.18以上版本
+        -->
         <dependency>
             <groupId>org.javassist</groupId>
             <artifactId>javassist</artifactId>
             <version>3.21.0-GA</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>5.0.0.M3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>5.0.0.M3</version>
         </dependency>
     </dependencies>
 

@@ -36,4 +36,5 @@
     <!--<ibingbo:registry address="127.0.0.1:2181"/>-->
     <!--<ibingbo:reference interface="com.ibingbo.service.HelloService" id="helloService" group="test" version="1.0.0"/>-->
 
+    <import resource="security-config.xml"/>
 </beans>
